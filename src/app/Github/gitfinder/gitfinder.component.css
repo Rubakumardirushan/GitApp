@@ -1,0 +1,82 @@
+* {
+    font-family: Georgia, serif;
+}
+
+input {
+    width: 400px;
+    border-radius: 20px;
+    height: 40px;
+}
+
+button {
+    width: 100px;
+    height: 38px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 140px;
+}
+
+img {
+    border-radius: 100px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    /* Adjust the maximum width as needed */
+    padding: 20px;
+    /* Add padding around the content */
+    background-color: #f8f9fa;
+    /* Add background color */
+    border-radius: 10px;
+    /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for a lifted effect */
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 300px;
+        /* Adjust width for smaller screens */
+        height: 30px;
+        border-radius: 20px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        margin-left: 90px;
+    }
+
+    .diru {
+        margin-left: 50px;
+    }
+
+}
+
+.diru {
+    margin-left: 90px;
+}
+
+/* Center content of rows */
+.row {
+    justify-content: center;
+}
+
+/* Additional styles for input and button */
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    margin: 0.5rem;
+}

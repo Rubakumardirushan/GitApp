@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <h4 class="d-flex justify-content-center mt-5 mb-5 diru">FIND GITHUB USER </h4>
+    </div>
+
+    <div class="row ">
+        <form action="" class="form-group d-flex justify-content-center">
+            <input type="text" placeholder="Enter GitHub Username " class="form-control mb-3 ms-5 rounded-5"
+                (input)="getname($event)">
+            <button class="form-control ms-1 btn btn-primary" (click)="findname()">SUBMIT</button>
+        </form>
+    </div>
+
+    <div class="row ">
+        <div class="row ">
+            <h4 class="d-flex justify-content-center">{{userinfo.name}}</h4>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <img src="{{userinfo.avatar_url}}" alt="" style="width: 200px; " class="img-rounded">
+        </div>
+        <div class="row">
+            @if (userinfo.bio) {
+            <span>
+                <p class="d-flex justify-content-center">Bio:{{userinfo.bio}}</p>
+            </span>
+            }
+        </div>
+        <div class="row">
+            @if(userinfo.location) {
+            <p class="d-flex justify-content-center">Location:{{userinfo.location}}</p>
+            }@else{
+            }
+        </div>
+        <div class="row">
+            @if(userinfo.public_repos){
+            <p class="d-flex justify-content-center">Public Repos:{{userinfo.public_repos}}</p>
+            }
+        </div>
+        @if(userinfo.followers_url) {
+        <span class="d-flex justify-content-center">
+            <button (click)="getfollowers()" class="form-control btn btn-secondary" style="width: 200px;"
+                [disabled]="userinfo.conut">Get Followers</button>
+        </span>
+        }@else{
+        }
+    </div>
+
+    <div>
+        @for(name of userinfo.follower ;track name){
+        <p class="d-flex justify-content-center">{{name}}</p>
+        }
+    </div>
+
+    <div class="row">
+        <!-- Copyright Text -->
+        <p class="d-flex justify-content-center">Designed by Dirushan © 2024</p>
+    </div>
+</div>
